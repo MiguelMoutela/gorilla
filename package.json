@@ -1,0 +1,17 @@
+{
+  "name": "gorilla",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "app": "npm start --prefix app",
+    "server": "npm start --prefix server",
+    "dev": "concurrently \"npm run server\" \"npm run app\""
+  },
+  "keywords": [],
+  "author": "Leonardo Maldonado <leonardomso11@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "concurrently": "^4.1.0"
+  }
+}
