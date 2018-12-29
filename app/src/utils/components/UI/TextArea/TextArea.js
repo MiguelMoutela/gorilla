@@ -1,11 +1,12 @@
 import styled from "styled-components";
 
-const Input = styled.input`
+const TextArea = styled.textarea`
   width: 100%;
-  height: 50px;
+  height: 110px;
   background-color: rgba(246, 246, 246, 0.3);
   border: 1px solid #d8dde6;
   border-radius: 5px;
+  line-height: 1.5;
   text-indent: 20px;
   font-size: 14px;
   font-family: "Inter UI Medium";
@@ -34,4 +35,4 @@ const Input = styled.input`
   }
 `;
 
-export default Input;
+export default TextArea;

@@ -23,8 +23,6 @@ const InnerForm = ({
     <Input
       type="email"
       name="email"
-      width="80%"
-      maxWidth="320px"
       onChange={handleChange}
       onBlur={handleBlur}
       value={values.email}
@@ -38,8 +36,6 @@ const InnerForm = ({
     <Input
       type="password"
       name="password"
-      width="80%"
-      maxWidth="320px"
       onChange={handleChange}
       onBlur={handleBlur}
       value={values.password}
@@ -53,8 +49,6 @@ const InnerForm = ({
     <Input
       type="password"
       name="passwordConfirmation"
-      width="80%"
-      maxWidth="320px"
       onChange={handleChange}
       onBlur={handleBlur}
       value={values.passwordConfirmation}
@@ -64,7 +58,7 @@ const InnerForm = ({
         <h2>{errors.passwordConfirmation}</h2>
       </Error>
     )}
-    <Button width="150px" type="submit" disabled={isSubmitting}>
+    <Button type="submit" disabled={isSubmitting}>
       Create account
     </Button>
     <Link to="/signin">Already have an account? Sign In</Link>
