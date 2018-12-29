@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const AllPosts = styled.main`
+const StyledCreatePost = styled.main`
   width: 100%;
   height: 100%;
   display: flex;
@@ -11,4 +11,4 @@ const AllPosts = styled.main`
   grid-column: 1 / 2;
 `;
 
-export default AllPosts;
+export default StyledCreatePost;
