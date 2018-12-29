@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 const Button = styled.button`
-  width: 100%;
-  height: 50px;
+  width: ${props => props.width || "100%"}
+  height: ${props => props.height || "50px"}
   font-family: "Inter UI Medium";
   font-size: 1em;
   border: none;
