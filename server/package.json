@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "start": "npm run server",
-    "server": "nodemon --exec babel-node index.js"
+    "server": "nodemon --exec babel-node index.js",
+    "test": "jest",
+    "test:watch": "npm run test --watch",
+    "test:cover": "npm run test --coverage"
   },
   "keywords": [],
   "author": "Leonardo Maldonado <leonardomso11@gmail.com>",
@@ -56,6 +59,11 @@
     "validator": "^10.10.0"
   },
   "jest": {
+    "testEnvironment": "node",
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "./dist"
+    ],
     "setupFiles": [
       "<rootDir>/config/tests/jest.config"
     ],
