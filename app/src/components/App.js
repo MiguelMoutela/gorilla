@@ -14,7 +14,7 @@ import GorillaLogo from "../utils/components/UI/Gorilla/GorillaLogo/GorillaLogo"
 import Links from "../utils/components/UI/Links/Links";
 import Main from "../utils/components/UI/Main/Main";
 
-import logo from "../assets/images/Logo/gorilla.png";
+import logo from "../images/gorilla.png";
 import reset from "../utils/css/reset";
 
 const GlobalStyle = createGlobalStyle`${reset}`;
