@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "app": "npm start --prefix app",
+    "app": "yarn start --prefix=app",
     "server": "npm start --prefix server",
     "dev": "concurrently \"npm run server\" \"npm run app\""
   },
