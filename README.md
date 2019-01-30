@@ -23,6 +23,8 @@ Gorilla
 
 This is an app example with GraphQL Authentication using JWT and MongoDB, made with study purposes only. Feel free to contribute.
 
+Front-end part not working yet, only the back-end.
+
 ## Getting started
 
 1. Clone this repo using `https://github.com/leonardomso/gorilla.git`
