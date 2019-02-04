@@ -1,5 +1,5 @@
 require("dotenv").config();
-import { GraphQLServer, PubSub } from "graphql-yoga";
+import { GraphQLServer } from "graphql-yoga";
 import mongoose from "mongoose";
 
 import schema from "./graphql/";
