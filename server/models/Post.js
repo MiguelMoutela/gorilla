@@ -4,26 +4,26 @@ import { ObjectID } from "mongodb";
 const Schema = mongoose.Schema;
 
 ObjectID.prototype.valueOf = function() {
-  return this.toString();
+    return this.toString();
 };
 
 const PostSchema = new Schema({
-  title: {
-    type: String,
-    required: true
-  },
-  body: {
-    type: String,
-    required: true
-  },
-  published: {
-    type: Boolean,
-    required: true
-  },
-  author: {
-    type: Schema.Types.ObjectId,
-    ref: "User"
-  }
+    title: {
+        type: String,
+        required: true
+    },
+    body: {
+        type: String,
+        required: true
+    },
+    published: {
+        type: Boolean,
+        required: true
+    },
+    author: {
+        type: Schema.Types.ObjectId,
+        ref: "User"
+    }
 });
 
 export default mongoose.model("Post", PostSchema);

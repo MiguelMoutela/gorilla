@@ -10,65 +10,65 @@ import Button from "../../utils/components/UI/Button/Button";
 import Error from "../../utils/components/UI/Error/Error";
 
 const InnerForm = ({
-  values,
-  errors,
-  touched,
-  handleChange,
-  handleBlur,
-  handleSubmit,
-  isSubmitting
+    values,
+    errors,
+    touched,
+    handleChange,
+    handleBlur,
+    handleSubmit,
+    isSubmitting
 }) => (
-  <Form onSubmit={handleSubmit} gridRow="4 / 6">
-    <Label>Email address</Label>
-    <Input
-      type="email"
-      name="email"
-      onChange={handleChange}
-      onBlur={handleBlur}
-      value={values.email}
-    />
-    {touched.email && errors.email && (
-      <Error>
-        <h2>{errors.email}</h2>
-      </Error>
-    )}
-    <Label>Password</Label>
-    <Input
-      type="password"
-      name="password"
-      onChange={handleChange}
-      onBlur={handleBlur}
-      value={values.password}
-    />
-    {touched.password && errors.password && (
-      <Error>
-        <h2>{errors.password}</h2>
-      </Error>
-    )}
-    <Button type="submit">Sign In</Button>
-    <Link to="/signup">Don't have an account? Create an account</Link>
-  </Form>
+    <Form onSubmit={handleSubmit} gridRow="4 / 6">
+        <Label>Email address</Label>
+        <Input
+            type="email"
+            name="email"
+            onChange={handleChange}
+            onBlur={handleBlur}
+            value={values.email}
+        />
+        {touched.email && errors.email && (
+            <Error>
+                <h2>{errors.email}</h2>
+            </Error>
+        )}
+        <Label>Password</Label>
+        <Input
+            type="password"
+            name="password"
+            onChange={handleChange}
+            onBlur={handleBlur}
+            value={values.password}
+        />
+        {touched.password && errors.password && (
+            <Error>
+                <h2>{errors.password}</h2>
+            </Error>
+        )}
+        <Button type="submit">Sign In</Button>
+        <Link to="/signup">Don't have an account? Create an account</Link>
+    </Form>
 );
 
 // Wrap our form with the using withFormik HoC
 const SignIn = withFormik({
-  // Transform outer props into form values
-  mapPropsToValues: props => ({ email: "", password: "" }),
+    // Transform outer props into form values
+    mapPropsToValues: props => ({ email: "", password: "" }),
 
-  validationSchema: yup.object().shape({
-    email: yup
-      .string()
-      .email("Email not valid")
-      .required("Email is required"),
-    password: yup
-      .string()
-      .min(8, "Password must be at least 8 characters")
-      .required("Password is required")
-  }),
+    validationSchema: yup.object().shape({
+        email: yup
+            .string()
+            .email("Email not valid")
+            .required("Email is required"),
+        password: yup
+            .string()
+            .min(8, "Password must be at least 8 characters")
+            .required("Password is required")
+    }),
 
-  handleSubmit(values) {
-    console.log(values);
-  }
+    handleSubmit(values) {
+        console.log(values);
+    }
 })(InnerForm);
 
 export default SignIn;
