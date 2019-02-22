@@ -10,21 +10,18 @@ const { URI: db } = process.env;
 
 // Connect to MongoDB with Mongoose.
 mongoose
-  .connect(
-    db,
-    {
-      useCreateIndex: true,
-      useNewUrlParser: true
-    }
-  )
-  .then(() => console.log("MongoDB connected"))
-  .catch(err => console.log(err));
+    .connect(db, {
+        useCreateIndex: true,
+        useNewUrlParser: true
+    })
+    .then(() => console.log("MongoDB connected"))
+    .catch(err => console.log(err));
 
 const server = new GraphQLServer({
-  schema,
-  context
+    schema,
+    context
 });
 
 server.start(options, ({ port }) => {
-  console.log(`🚀 Server is running on http://localhost:${port}`);
+    console.log(`🚀 Server is running on http://localhost:${port}`);
 });
